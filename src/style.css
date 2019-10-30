@@ -1,0 +1,85 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+table th, table td {
+  white-space: nowrap;
+  border: 1px solid #dfdfdf;
+}
+table th.sorting, table td.sorting {
+  background-color: #eaeaea;
+}
+table th:first-child, table td:first-child {
+  padding: 10px;
+  width: 300px;
+}
+table th:first-child img, table td:first-child img {
+  margin-right: 10px;
+}
+table th:first-child p, table td:first-child p {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: 14px;
+}
+table th:first-child p.name, table td:first-child p.name {
+  font-weight: bold;
+  color: #555555;
+}
+table th:first-child p.title, table td:first-child p.title {
+  color: #555555;
+}
+table th:first-child p.timezone, table td:first-child p.timezone {
+  color: #898989;
+}
+table th:not(:first-child):not(.sorting), table td:not(:first-child):not(.sorting) {
+  background-color: #ffffff;
+  padding: 0;
+  width: 150px;
+}
+table th:not(:first-child):not(.sorting) .commitment, table td:not(:first-child):not(.sorting) .commitment {
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 5px;
+  position: relative;
+}
+table th:not(:first-child):not(.sorting) .commitment .hoursmeter, table td:not(:first-child):not(.sorting) .commitment .hoursmeter {
+  position: absolute;
+  display: block;
+  height: 3px;
+  top: 0;
+  left: 0;
+}
+table th:not(:first-child):not(.sorting) .commitment.pto .hoursmeter, table td:not(:first-child):not(.sorting) .commitment.pto .hoursmeter {
+  background-color: #de0000;
+}
+table th:not(:first-child):not(.sorting) .commitment.assigned .hoursmeter, table td:not(:first-child):not(.sorting) .commitment.assigned .hoursmeter {
+  background-color: #04a329;
+}
+table th:not(:first-child):not(.sorting) .commitment p, table td:not(:first-child):not(.sorting) .commitment p {
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+table th:not(:first-child):not(.sorting) .commitment p.hours, table td:not(:first-child):not(.sorting) .commitment p.hours {
+  color: #555555;
+}
+table th:not(:first-child):not(.sorting) .commitment p.type, table td:not(:first-child):not(.sorting) .commitment p.type {
+  color: #898989;
+}
+
+.DTFC_LeftHeadWrapper {
+  background-color: #eaeaea;
+}
+
+.DTFC_LeftBodyWrapper {
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+.DTFC_LeftBodyWrapper .DTFC_LeftBodyLiner {
+  overflow: hidden;
+}

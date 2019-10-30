@@ -1,0 +1,123 @@
+$leftSide--fontSize: 14px;
+$header--fontSize: 16px;
+$body--fontSize: 12px;
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse:collapse;
+  table-layout:fixed;
+  width:100%;
+  caption{
+    div{
+      display: flex;
+      button{
+        width: 150px;
+        border-radius: 25px;
+        outline: none;
+        margin: 0 20px;
+      }
+    }  
+  }
+  thead{
+    tr{
+      display: block;
+      width: 100%;
+    }
+  }
+  tbody{
+    display: block;
+    height: 600px;
+    overflow: auto;
+  }
+  th, td {
+    white-space: nowrap;
+    border:1px solid #dfdfdf;
+    &.sorting {
+      background-color: #eaeaea;
+    }
+    font-size: $header--fontSize;
+    &:first-child {
+      padding:10px;
+      width:300px;
+      img {
+        margin-right:10px;
+      }
+      p {
+        margin:0;
+        margin-bottom:0.5em;
+        font-size: $leftSide--fontSize;
+        &.name {
+          font-weight:bold;
+          color:#555555;
+        }
+        &.title {
+          color:#555555;
+        }
+        &.timezone {
+          color:#898989;
+        }
+      }
+    }
+    &:not(:first-child):not(.sorting)
+    {
+      background-color:#ffffff;
+      padding:0;
+      width:150px;
+      .commitment {
+        display: flex;
+        justify-content: space-between;
+        border:1px solid #dfdfdf;
+        border-radius: 3px;
+        font-size: 12px;
+        padding:5px;
+        position: relative;
+        .hoursmeter,.d {
+          position:absolute;
+          display: block;
+          height:3px;
+          width: 150px;
+          bottom:0;
+          left:0;
+          overflow: hidden;
+        }
+        
+        &.pto {
+          .hoursmeter {
+            background-image: linear-gradient(to right, #f1a5a5 0%, #ac0909 100%);
+          }
+        }
+        &.assigned {
+          .hoursmeter {
+            background-image: linear-gradient(to right, #61c8eb 0%, #0717a5 100%) ;
+          }
+        }
+        p {
+          font-size: $body--fontSize ;
+          margin:0;
+          margin-bottom:0.2em;
+          &.hours {
+            color:#555555;
+          }
+          &.type {
+            color:#898989;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.DTFC_LeftHeadWrapper {
+  background-color: #eaeaea;
+}
+
+.DTFC_LeftBodyWrapper {
+  background-color:#f4f4f4;
+  overflow:hidden;
+  .DTFC_LeftBodyLiner {
+    overflow:hidden;
+  }
+}
